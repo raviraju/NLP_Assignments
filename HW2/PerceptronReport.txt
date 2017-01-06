@@ -1,0 +1,127 @@
+Assignment 2 Report
+
+Name: Ravi Raju Krishna
+
+Part I.
+
+1. Performance of standard perceptron on the development data with 100% of the training data
+1a. spam precision:	0.9879945429740792
+1b. spam recall: 	0.9853061224489796
+1c. spam F1 score: 	0.9866485013623978
+1d. ham precision:	0.9642384105960264
+1e. ham recall: 	0.9706666666666667
+1f. ham F1 score:	0.9674418604651163
+weighted_avg :  0.9810813590733306
+
+2. Performance of averaged perceptron on the development data with 100% of the training data
+2a. spam precision:	0.9864056552474171
+2b. spam recall: 	0.9872108843537415
+2c. spam F1 score: 	0.9868081055351556
+2d. ham precision:	0.9686038744154977
+2e. ham recall: 	0.9666666666666667
+2f. ham F1 score:	0.9676343009676343
+weighted_avg :  0.9812504810228306
+
+Part II.
+
+3. Performance of standard perceptron on the development data with 10% of the training data
+3a. spam precision:	0.9561253561253561
+3b. spam recall: 	0.9131972789115647
+3c. spam F1 score: 	0.9341684064022269
+3d. ham precision:	0.8084084084084084
+3e. ham recall: 	0.8973333333333333
+3f. ham F1 score:	0.8505529225908373
+weighted_avg :  0.9099320342829835
+
+4. Performance of averaged perceptron on the development data with 10% of the training data
+4a. spam precision:	0.955928348023884
+4b. spam recall: 	0.9148299319727892
+4c. spam F1 score: 	0.9349276974416018
+4d. ham precision:	0.8112183353437877
+4e. ham recall: 	0.8966666666666666
+4f. ham F1 score:	0.8518049398353388
+weighted_avg :  0.9108341445122501
+
+Part III. You are welcome to reuse code you wrote for assignment 1,
+but we would like to know how you handled the following tasks.
+
+5. How did you calculate precision, recall and F1 score? If you used a
+separate script, please give the name of the script and describe how
+to run it.
+per_classify.py has the following optional arguments:
+  -e, --evaluate        compute model evaluation scores
+  -d, --dumpEvaluation  dump evaluations statistics
+which when used in combination : 
+python3 .\per_classify.py 'C:\Users\Ravi\Desktop\USC\Courses_Sem3\NLP\homework\hw1\Spam or Ham\dev' std_training_output.txt -e -d
+shall produce the compute precision,recall and F1 score and dumpEvaluation stats to perEvaluation.txt
+perEvaluation.txt : records the discrepancies of email_files whose actual label(ham/spam) with prediction(spam/ham) and scores
+
+6. How did you separate 10% of the training data? If you used a
+separate script, please give the name of the script and describe how
+to run it. Explain how you or your code choose the files.
+per_learn.py and avg_per_learn.py have the following optional argument   :
+-p PERCENTAGE, --percentage PERCENTAGE
+                        percentage of labelled data to learn from
+Given percentage is used compute part of total emails files to be processed, half of those many spam and ham email files are processed.
+***************************************************************************Usage for standard perceptron:************************ 
+PS C:\Users\Ravi\Desktop\USC\Courses_Sem3\NLP\homework\hw2\submit> python3 .\per_learn.py 'C:\Users\Ravi\Desktop\USC\Cou
+rses_Sem3\NLP\homework\hw1\Spam or Ham\train' -p 10
+Parsing 10% of Email Files
+Perceptron Training Iteration 0
+Perceptron Training Iteration 1
+Perceptron Training Iteration 2
+Perceptron Training Iteration 3
+Perceptron Training Iteration 4
+Perceptron Training Iteration 5
+Perceptron Training Iteration 6
+Perceptron Training Iteration 7
+Perceptron Training Iteration 8
+Perceptron Training Iteration 9
+Perceptron Training Iteration 10
+Perceptron Training Iteration 11
+Perceptron Training Iteration 12
+Perceptron Training Iteration 13
+Perceptron Training Iteration 14
+Perceptron Training Iteration 15
+Perceptron Training Iteration 16
+Perceptron Training Iteration 17
+Perceptron Training Iteration 18
+Perceptron Training Iteration 19
+Perceptron Model Trained. Parameters loaded into per_model.txt
+PS C:\Users\Ravi\Desktop\USC\Courses_Sem3\NLP\homework\hw2\submit>
+***************************************************************************Usage for average perceptron:************************
+PS C:\Users\Ravi\Desktop\USC\Courses_Sem3\NLP\homework\hw2\submit> python3 .\avg_per_learn.py 'C:\Users\Ravi\Desktop\USC
+\Courses_Sem3\NLP\homework\hw1\Spam or Ham\train' -p 10
+Parsing 10% of Email Files
+Avg Perceptron Training Iteration 0
+Avg Perceptron Training Iteration 1
+Avg Perceptron Training Iteration 2
+Avg Perceptron Training Iteration 3
+Avg Perceptron Training Iteration 4
+Avg Perceptron Training Iteration 5
+Avg Perceptron Training Iteration 6
+Avg Perceptron Training Iteration 7
+Avg Perceptron Training Iteration 8
+Avg Perceptron Training Iteration 9
+Avg Perceptron Training Iteration 10
+Avg Perceptron Training Iteration 11
+Avg Perceptron Training Iteration 12
+Avg Perceptron Training Iteration 13
+Avg Perceptron Training Iteration 14
+Avg Perceptron Training Iteration 15
+Avg Perceptron Training Iteration 16
+Avg Perceptron Training Iteration 17
+Avg Perceptron Training Iteration 18
+Avg Perceptron Training Iteration 19
+Avg Perceptron Training Iteration 20
+Avg Perceptron Training Iteration 21
+Avg Perceptron Training Iteration 22
+Avg Perceptron Training Iteration 23
+Avg Perceptron Training Iteration 24
+Avg Perceptron Training Iteration 25
+Avg Perceptron Training Iteration 26
+Avg Perceptron Training Iteration 27
+Avg Perceptron Training Iteration 28
+Avg Perceptron Training Iteration 29
+Avg Perceptron Model Trained. Parameters loaded into per_model.txt
+PS C:\Users\Ravi\Desktop\USC\Courses_Sem3\NLP\homework\hw2\submit>
