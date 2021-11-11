@@ -5,7 +5,7 @@ import pycrfsuite
 import time
 
 trainer = pycrfsuite.Trainer(verbose=False)
-iterations = 50
+iterations = 100
 
 posPairSet = {('PRP', 'MD'), ('PRP', 'VBP'), ('PRP', 'VBD')}
 questionTagSet = {'qy','qw','qy^d','bh','qo', 'qh', '^g', 'qw^d'}
@@ -49,15 +49,15 @@ def getFeatures(utterances):
                 if isQuestion(previous_act_tag):#on speaker change if previous one is a question current should be a response
                     response = True
         #print("{} {} {}".format(firstUtterance, speakerChange, current_speaker))
+
         current_act_tag = utterances[utterance_no].act_tag
-                   
         utterance_features = []
         if isQuestion(current_act_tag):
             utterance_features = ["Question"]
         if response:
             utterance_features = ["Response"]
         utterance_features.extend([str(int(firstUtterance)), str(int(speakerChange))])
-        
+
         if utterance_no > 1:
             previous_act_tag = utterances[utterance_no-1].act_tag
             previous_to_previous_act_tag = utterances[utterance_no-2].act_tag

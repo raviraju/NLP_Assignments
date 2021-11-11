@@ -126,10 +126,11 @@ Name: Ravi Raju Krishna
 	    but/CC those/DT are/VBP ni/JJ ,/, Germantown/NNP is/VBZ a/DT nice/JJ area/NN ./.
 	    It/PRP 's/BES a/DT nice/JJ area/NN ./.
 	    nice/JJ area/NN
-	posPairSet = {('PRP', 'MD'), ('PRP', 'VBP'), ('PRP', 'VBD')}
-	['0', '1', 'sv_True', 'TOKEN_I', 'TOKEN_think', 'TOKEN_that', 'TOKEN_is', 'TOKEN_just', 'TOKEN_a', 'TOKEN_hoot', 'TOKEN_.', 'POS_PRP', 'POS_VBP', 'POS_DT', 'POS_VBZ', 'POS_RB', 'POS_DT', 'POS_NN', 'POS_.']
-	we have one sv_True feature added for the occurence : 'TOKEN_I', 'TOKEN_think'	'POS_PRP', 'POS_VBP'
-	['0', '0', 'sv_True', 'sv_True', 'TOKEN_So', 'TOKEN_I', 'TOKEN_think', 'TOKEN_that', 'TOKEN_,', 'TOKEN_uh', 'TOKEN_,', 'TOKEN_they', 'TOKEN_need', 'TOKEN_to', 'TOKEN_look', 'TOKEN_into', 'TOKEN_it', 'POS_RB', 'POS_PRP', 'POS_VBP', 'POS_IN', 'POS_,', 'POS_UH', 'POS_,', 'POS_PRP', 'POS_VBP', 'POS_TO', 'POS_VB', 'POS_IN', 'POS_PRP']
+	posPairSet = {('PRP', 'MD'), ('PRP', 'VBP'), ('PRP', 'VBD')} for such occurence sv_True was enabled
+	['0', '1', 'sv_True', 'TOKEN_I', 'TOKEN_think', 'TOKEN_that', 'TOKEN_is', 'TOKEN_just', 'TOKEN_a', 'TOKEN_hoot', 'TOKEN_.',
+						  'POS_PRP', 'POS_VBP',     'POS_DT',     'POS_VBZ',  'POS_RB',     'POS_DT',  'POS_NN', 'POS_.']
+	['0', '0', 'sv_True', 'sv_True', 'TOKEN_So', 'TOKEN_I', 'TOKEN_think', 'TOKEN_that', 'TOKEN_,', 'TOKEN_uh', 'TOKEN_,', 'TOKEN_they', 'TOKEN_need', 'TOKEN_to', 'TOKEN_look', 'TOKEN_into', 'TOKEN_it', 
+									 'POS_RB',   'POS_PRP', 'POS_VBP',      'POS_IN',     'POS_,',   'POS_UH', 'POS_,',    'POS_PRP', 'POS_VBP',        'POS_TO', 'POS_VB', 'POS_IN', 'POS_PRP']
 	('+_ds', 1424),
 	('_aab', 1353),
 	('_dssv', 1120),
