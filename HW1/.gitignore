@@ -1,0 +1,6 @@
+__MACOSX
+train
+dev
+nbmodel.txt
+nbDiscrepancies.txt
+nboutput.txt
