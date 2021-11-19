@@ -237,9 +237,3 @@ f1_score :
 weighted_avg :  0.13
 (base) $
 ```
-
-### Performance on the development data with 100% of the training data & 
-
-```python
-
-```

@@ -1,0 +1,6 @@
+__MACOSX
+train
+dev
+per_model.txt
+avg_per_model.txt
+per_discrepancies.txt
